@@ -889,7 +889,7 @@ def open_telemetry_logs(logpath_telem, logpath_telem_raw):
         # app is running)
         t = threading.Thread(target=log_writer, name='log_writer')
         t.daemon = True
-        t.start()
+        #t.start()
     except Exception as e:
         print("ERROR: opening log file for writing: %s" % e)
         mpstate.status.exit = True
